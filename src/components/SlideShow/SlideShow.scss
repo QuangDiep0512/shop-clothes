@@ -1,0 +1,22 @@
+@import "../../scss/responsive.scss";
+.slider-container {
+  // width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 35rem;
+  }
+  .slick-next:before {
+  }
+  .slick-arrow {
+    @include Reponsive("SMALL_DEVICES") {
+      display: none;
+    }
+    background-color: #ec3740 !important;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+  }
+}

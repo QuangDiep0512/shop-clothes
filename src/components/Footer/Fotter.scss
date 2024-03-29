@@ -1,0 +1,68 @@
+@import "../../scss/responsive.scss";
+.fotter {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 3rem;
+  background-color: #000;
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 7rem 10rem;
+  @include Reponsive("WIDE_MOBILE") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &-list {
+    text-align: left;
+    &--heading,
+    .social-network {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    .social-network {
+      display: grid;
+      grid-template-columns: repeat(5, 4rem);
+      .fotter-icon {
+        &:hover {
+          opacity: 0.7;
+          cursor: pointer;
+        }
+      }
+    }
+    .input-email {
+      position: relative;
+      margin: 2rem 0;
+      > .text-email {
+        padding: 1rem;
+        width: 100%;
+        border: 1px solid #fff;
+        background: #000;
+        color: #fff;
+      }
+      .send {
+        position: absolute;
+        right: 1rem;
+        transform: translateY(-50%);
+        top: 50%;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &--title {
+      font-size: 1.4rem;
+      color: #878787;
+      .link {
+        text-decoration: none;
+        color: #878787;
+        &:hover {
+          color: #fff;
+        }
+      }
+      p {
+        line-height: 1.5;
+      }
+    }
+  }
+}

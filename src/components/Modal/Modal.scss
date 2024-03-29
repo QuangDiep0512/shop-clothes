@@ -1,0 +1,144 @@
+@import "../../scss/_variable.scss";
+.modal-login {
+  position: absolute;
+  top: 6rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 244, 243, 0.884);
+  .modal-container {
+    animation: modal linear 0.5s;
+    position: relative;
+    width: 40rem;
+    background: linear-gradient(to bottom, $color-blue 0%, $color-purple 100%);
+    margin: 4rem auto;
+    border-radius: 1rem;
+    padding: 3rem 5rem;
+    text-align: center;
+    .close-icon {
+      width: 2rem;
+      height: 2rem;
+      color: #fff;
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .img-avatar {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .login-heading {
+      margin: 2rem 0 3rem 0;
+      color: #fff;
+      font-size: 2.2rem;
+    }
+    .form-login {
+      &--group {
+        position: relative;
+        margin-bottom: 1rem;
+        .form-login--icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #fff;
+        }
+        .form--input {
+          width: 100%;
+          background: transparent;
+          border: 0px solid transparent;
+          border-bottom: 1px solid #fff;
+          padding: 0.5rem 3rem;
+          color: #fff;
+          &::placeholder {
+            color: #e2dfdf;
+          }
+          &:focus {
+            outline: none;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .checkbox {
+      text-align: left;
+      color: #e6e6e6;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+    }
+    .btn-login,
+    .btn-register {
+      padding: 0.7rem 2rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      border: none;
+      margin: 4rem 0 1.5rem 0;
+      color: #111111f3;
+    }
+    .login-other {
+      margin-bottom: 2rem;
+      &--title {
+        display: block;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+      .btn-other {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        .btn-login--other {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #979797;
+          border-radius: 5px;
+          padding: 7px 0;
+          .login-other--icon {
+            font-size: 2rem;
+          }
+          .login-other--gg,
+          .login-other--fb {
+            font-weight: bold;
+            font-size: 1.6rem;
+            margin-left: 1rem;
+          }
+          .login-other--gg {
+            color: #e71e1e;
+          }
+          .login-other--fb {
+            color: #0d73b8;
+          }
+        }
+      }
+    }
+    .login-fotter {
+      display: flex;
+      justify-content: center;
+      color: #ececec;
+      font-size: 1.6rem;
+      .forgot {
+        margin-right: 2px;
+      }
+      .register,
+      .login {
+        color: #ececec;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes modal {
+  from {
+    top: -15rem;
+  }
+  to {
+    top: 0;
+  }
+}

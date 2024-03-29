@@ -1,0 +1,116 @@
+.sideBar {
+  font-family: "Nunito Sans", sans-serif;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  width: 40rem;
+  background-color: #a9c9e9;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 2rem;
+  overflow-y: scroll;
+  z-index: 1000;
+  animation: appear ease-in 0.5s;
+
+  &--headder {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.7rem;
+    border-bottom: 1px solid red;
+    .arrow {
+      cursor: pointer;
+    }
+  }
+  .product-lists {
+    padding: 1rem;
+    border-bottom: 1px solid red;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    &--item {
+      display: flex;
+      align-items: center;
+      .image {
+        img {
+          width: 5rem;
+          height: 7rem;
+        }
+      }
+      .information {
+        width: 21rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 1rem;
+        &-title {
+          text-transform: uppercase;
+          font-weight: 800;
+        }
+        .amount {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-weight: 900;
+          &--quantity {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid red;
+            padding: 0.1rem;
+            width: 7rem;
+            line-height: 1rem;
+            .prev,
+            .increase,
+            .quantum {
+              font-size: 1.4rem;
+              padding: 0.3rem;
+            }
+            .prev,
+            .increase {
+              cursor: pointer;
+            }
+          }
+          &--pice {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    &--right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: 1.2rem;
+      font-weight: 800;
+      .total-price {
+        color: rgb(209, 37, 37);
+      }
+      .close {
+        cursor: pointer;
+      }
+    }
+  }
+  &--footer {
+    font-weight: 800;
+    font-size: 1.7rem;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .bin {
+      background-color: rgb(216, 67, 67);
+      padding: 1rem;
+      color: #faeeeefd;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

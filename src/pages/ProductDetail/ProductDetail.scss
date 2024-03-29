@@ -1,0 +1,60 @@
+@import "../../scss/responsive.scss";
+.detail {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 10rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include Reponsive("SMALL_DEVICES") {
+    margin: 5rem 1rem;
+  }
+  &--img {
+    min-width: 20rem;
+    height: 30rem;
+    @include Reponsive("SMALL_DEVICES") {
+      width: 8rem;
+      height: 12rem;
+      object-fit: contain;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      @include Reponsive("SMALL_DEVICES") {
+        object-fit: contain;
+      }
+    }
+  }
+  &--information {
+    margin-left: 4rem;
+    max-width: 45rem;
+    @include Reponsive("SMALL_DEVICES") {
+      margin-left: 1rem;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 2rem;
+      @include Reponsive("SMALL_DEVICES") {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+    .price {
+      padding: 2rem 0;
+      color: #cf3f3f;
+    }
+    .btn-submit {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #504f4f;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    .description {
+      font-size: 1.4rem;
+      @include Reponsive("SMALL_DEVICES") {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
